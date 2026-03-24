@@ -6,6 +6,7 @@ A fully functional, responsive website showcasing products from A to Z with two 
 
 - **Complete A-Z Product Catalog**: 26 products, one for each letter
 - **Dual Browse Modes**: View products A-to-Z or Z-to-A
+- **🎨 Product Ad Generator**: Create beautiful product ads with photos and descriptions
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 - **Product Details**: Each product includes:
   - Product name and letter identifier
@@ -23,6 +24,7 @@ Eshita-/
 ├── index.html              # Landing page / Home
 ├── products-a-z.html       # A to Z product catalog
 ├── products-z-a.html       # Z to A product catalog
+├── ad-generator.html       # Product ad generator tool
 ├── style.css               # Complete styling
 ├── script.js               # Dynamic product loading
 ├── products.json           # Product data
@@ -105,6 +107,7 @@ This website is automatically deployed to GitHub Pages using GitHub Actions.
 - **Home Page** (`index.html`) - Landing page with overview
 - **A → Z Browse** (`products-a-z.html`) - Traditional alphabetical order
 - **Z → A Browse** (`products-z-a.html`) - Reverse alphabetical order
+- **Ad Generator** (`ad-generator.html`) - Create beautiful product ads
 
 ## 🎨 Design Features
 
@@ -157,11 +160,20 @@ Each product in `products.json` contains:
 ✅ **SEO Optimized** - Proper meta tags and structure
 ✅ **Free Hosting** - Deployed via GitHub Pages
 ✅ **Always Updated** - Edit and push to auto-deploy
+✅ **Ad Generator** - Create product ads with custom photos and text
 
 ## 🔧 Customization
 
 ### Add New Products
 Edit `products.json` and add new entries following the existing format.
+
+### Create Product Ads
+1. Visit the Ad Generator page
+2. Upload product image or paste image URL
+3. Enter product name and description
+4. Customize colors and button text
+5. Click "Generate Ad Preview"
+6. Download or view all created ads
 
 ### Change Colors
 Edit the color variables in `style.css`.

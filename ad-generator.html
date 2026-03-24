@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Ad Generator - Create Beautiful Product Ads</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .generator-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .generator-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .form-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h3 {
+            margin-bottom: 25px;
+            color: #2c3e50;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #e74c3c;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-group input {
+            flex: 1;
+        }
+
+        .file-upload {
+            position: relative;
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        .file-upload-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .file-upload-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .image-preview {
+            width: 100%;
+            height: 200px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .image-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .color-picker-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .color-input {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .btn-generate {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.3);
+        }
+
+        .preview-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .preview-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .ad-preview {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .ad-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .ad-image {
+            width: 100%;
+            height: 300px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ad-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ad-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(231, 76, 60, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .ad-content {
+            padding: 25px;
+        }
+
+        .ad-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .ad-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .ad-footer {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ad-cta {
+            flex: 1;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .ad-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .download-btn {
+            padding: 10px 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .download-btn:hover {
+            background: #229954;
+        }
+
+        .empty-state {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f9f9f9;
+            border-radius: 10px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+        }
+
+        .ads-gallery {
+            margin-top: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        .gallery-delete {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .gallery-delete:hover {
+            background: #e74c3c;
+            color: white;
+        }
+
+        @media (max-width: 1024px) {
+            .generator-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .generator-container {
+                padding: 20px 10px;
+            }
+
+            .form-section {
+                padding: 20px;
+            }
+
+            .ad-preview {
+                margin: 0 auto;
+                max-width: 400px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>📦 Products A-Z</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products-a-z.html">A → Z</a></li>
+                <li><a href="products-z-a.html">Z → A</a></li>
+                <li><a href="ad-generator.html" class="active">Ad Generator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2>Product Ad Generator</h2>
+            <p>Create Beautiful Product Ads in Seconds</p>
+        </div>
+    </section>
+
+    <!-- Main Generator -->
+    <section class="generator-container">
+        <div class="generator-layout">
+            <!-- Form Section -->
+            <div class="form-section">
+                <h3>✏️ Create Your Ad</h3>
+
+                <!-- Product Image -->
+                <div class="form-group">
+                    <label>Product Image</label>
+                    <div class="image-preview" id="imagePreview">
+                        <div style="text-align: center; color: #999;">
+                            <div style="font-size: 48px; margin-bottom: 10px;">📸</div>
+                            <div>Product image will appear here</div>
+                        </div>
+                    </div>
+                    <div class="file-upload">
+                        <input type="file" id="imageInput" accept="image/*">
+                        <button class="file-upload-btn" onclick="document.getElementById('imageInput').click()">
+                            📁 Upload Image
+                        </button>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <small style="color: #999;">Or paste image URL:</small>
+                        <input type="text" id="imageUrl" placeholder="https://example.com/image.jpg">
+                    </div>
+                </div>
+
+                <!-- Product Name -->
+                <div class="form-group">
+                    <label>Product Name *</label>
+                    <input type="text" id="productName" placeholder="E.g., Premium Wireless Headphones" required>
+                </div>
+
+                <!-- Product Description -->
+                <div class="form-group">
+                    <label>Description *</label>
+                    <textarea id="productDesc" placeholder="Describe your product features, benefits, and why customers should buy it..." required></textarea>
+                </div>
+
+                <!-- Price -->
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" id="productPrice" placeholder="E.g., $99.99 or $99.99 - $199.99">
+                </div>
+
+                <!-- Badge Text -->
+                <div class="form-group">
+                    <label>Badge Label</label>
+                    <input type="text" id="badgeText" placeholder="E.g., NEW, SALE, HOT" value="NEW">
+                </div>
+
+                <!-- Button Text -->
+                <div class="form-group">
+                    <label>CTA Button Text</label>
+                    <input type="text" id="ctaText" placeholder="E.g., Shop Now, Buy Now" value="Shop Now">
+                </div>
+
+                <!-- Colors -->
+                <div class="form-group">
+                    <label>Customize Colors</label>
+                    <div class="color-picker-group">
+                        <div>
+                            <small>Badge Color</small>
+                            <input type="color" id="badgeColor" value="#e74c3c" class="color-input">
+                        </div>
+                        <div>
+                            <small>Button Color</small>
+                            <input type="color" id="buttonColor" value="#667eea" class="color-input">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generate Button -->
+                <button class="btn-generate" onclick="generateAd()">✨ Generate Ad Preview</button>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="preview-section">
+                <div class="preview-title">👀 Ad Preview</div>
+                <div id="previewContainer" class="empty-state">
+                    <div class="empty-state-icon">📋</div>
+                    <div>Fill in the form and click "Generate Ad Preview" to see your ad here</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ads Gallery -->
+    <section class="ads-gallery">
+        <div class="container">
+            <h3 style="font-size: 28px; margin-bottom: 30px; color: #2c3e50;">📚 Your Generated Ads</h3>
+            <div id="galleryContainer" class="gallery-grid" style="min-height: 200px;"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Created an Awesome Ad?</h3>
+            <p>Share it or download it for your marketing campaigns</p>
+            <a href="#galleryContainer" class="btn btn-primary">View All Ads</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Your one-stop shop for products from A to Z and ad creation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products-a-z.html">Browse A-Z</a></li>
+                        <li><a href="ad-generator.html">Generate Ads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@productsaz.com</p>
+                    <p>Phone: 1-800-PRODUCTS</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Products A-Z. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let generatedAds = [];
+        const maxAds = 10;
+
+        // Handle image upload
+        document.getElementById('imageInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    displayImage(event.target.result);
+                    document.getElementById('imageUrl').value = '';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Handle image URL
+        document.getElementById('imageUrl').addEventListener('change', function() {
+            const url = this.value;
+            if (url) {
+                displayImage(url);
+                document.getElementById('imageInput').value = '';
+            }
+        });
+
+        function displayImage(src) {
+            const preview = document.getElementById('imagePreview');
+            preview.innerHTML = `<img src="${src}" alt="Product image">`;
+        }
+
+        function generateAd() {
+            const productName = document.getElementById('productName').value;
+            const productDesc = document.getElementById('productDesc').value;
+            const productPrice = document.getElementById('productPrice').value;
+            const badgeText = document.getElementById('badgeText').value;
+            const ctaText = document.getElementById('ctaText').value;
+            const badgeColor = document.getElementById('badgeColor').value;
+            const buttonColor = document.getElementById('buttonColor').value;
+            const imagePreviewHtml = document.getElementById('imagePreview').innerHTML;
+
+            if (!productName || !productDesc) {
+                alert('Please fill in Product Name and Description');
+                return;
+            }
+
+            if (generatedAds.length >= maxAds) {
+                alert(`You can create up to ${maxAds} ads. Delete some to create more.`);
+                return;
+            }
+
+            const ad = {
+                id: Date.now(),
+                name: productName,
+                desc: productDesc,
+                price: productPrice,
+                badge: badgeText,
+                cta: ctaText,
+                badgeColor: badgeColor,
+                buttonColor: buttonColor,
+                image: imagePreviewHtml
+            };
+
+            // Show preview
+            showPreview(ad);
+
+            // Save to gallery
+            generatedAds.push(ad);
+            updateGallery();
+        }
+
+        function showPreview(ad) {
+            const preview = document.getElementById('previewContainer');
+            preview.innerHTML = `
+                <div class="ad-preview">
+                    <div class="ad-image">
+                        ${ad.image}
+                        <div class="ad-badge" style="background-color: ${ad.badgeColor};">${ad.badge}</div>
+                    </div>
+                    <div class="ad-content">
+                        <div class="ad-title">${ad.name}</div>
+                        <div class="ad-description">${ad.desc}</div>
+                        <div class="ad-footer">
+                            ${ad.price ? `<div style="font-size: 18px; font-weight: 700; color: ${ad.badgeColor};">${ad.price}</div>` : ''}
+                            <button class="ad-cta" style="background: linear-gradient(135deg, ${ad.buttonColor}, ${shadeColor(ad.buttonColor, -30)});">${ad.cta}</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateGallery() {
+            const gallery = document.getElementById('galleryContainer');
+            if (generatedAds.length === 0) {
+                gallery.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #999;">No ads created yet. Create your first ad above! 🎨</div>';
+                return;
+            }
+
+            gallery.innerHTML = generatedAds.map(ad => `
+                <div class="gallery-item">
+                    <button class="gallery-delete" onclick="deleteAd(${ad.id})">✕</button>
+                    <div class="ad-preview">
+                        <div class="ad-image">
+                            ${ad.image}
+                            <div class="ad-badge" style="background-color: ${ad.badgeColor};">${ad.badge}</div>
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title">${ad.name}</div>
+                            <div class="ad-description">${ad.desc}</div>
+                            <div class="ad-footer">
+                                ${ad.price ? `<div style="font-size: 16px; font-weight: 700; color: ${ad.badgeColor};">${ad.price}</div>` : ''}
+                                <button class="download-btn" onclick="downloadAd(${ad.id})">⬇️ Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function deleteAd(id) {
+            generatedAds = generatedAds.filter(ad => ad.id !== id);
+            updateGallery();
+        }
+
+        function downloadAd(id) {
+            const ad = generatedAds.find(a => a.id === id);
+            if (ad) {
+                alert(`✅ Download feature coming soon!\n\nAd: ${ad.name}\nYou can screenshot this ad or use it directly.`);
+            }
+        }
+
+        function shadeColor(color, percent) {
+            let R = parseInt(color.substring(1, 3), 16);
+            let G = parseInt(color.substring(3, 5), 16);
+            let B = parseInt(color.substring(5, 7), 16);
+
+            R = parseInt(R * (100 + percent) / 100);
+            G = parseInt(G * (100 + percent) / 100);
+            B = parseInt(B * (100 + percent) / 100);
+
+            R = Math.min(255, Math.max(0, R));
+            G = Math.min(255, Math.max(0, G));
+            B = Math.min(255, Math.max(0, B));
+
+            const RR = R.toString(16).length === 1 ? '0' + R.toString(16) : R.toString(16);
+            const GG = G.toString(16).length === 1 ? '0' + G.toString(16) : G.toString(16);
+            const BB = B.toString(16).length === 1 ? '0' + B.toString(16) : B.toString(16);
+
+            return '#' + RR + GG + BB;
+        }
+    </script>
+</body>
+</html>
