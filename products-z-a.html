@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Z to A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>📦 Products A-Z</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products-a-z.html">A → Z</a></li>
+                <li><a href="products-z-a.html" class="active">Z → A</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2>Products Z to A</h2>
+            <p>Browse our complete catalog in reverse alphabetical order</p>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div id="products-grid" class="products-grid"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Prefer Normal Order?</h3>
+            <p>Check out our A to Z collection</p>
+            <a href="products-a-z.html" class="btn btn-primary">Browse A → Z</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Your one-stop shop for products from A to Z.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products-a-z.html">Browse A-Z</a></li>
+                        <li><a href="products-z-a.html">Browse Z-A</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@productsaz.com</p>
+                    <p>Phone: 1-800-PRODUCTS</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Products A-Z. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load products in Z-A order
+        loadProducts('products.json', 'desc');
+    </script>
+</body>
+</html>

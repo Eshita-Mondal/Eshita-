@@ -1,0 +1,236 @@
+[
+  {
+    "id": "A",
+    "name": "AirPods Case",
+    "tagline": "Protect and personalize",
+    "description": "Premium silicone case with shock resistance, card slot, and wireless charging compatibility. Durable and stylish protection for your AirPods.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop",
+    "price": "$19.99",
+    "rating": 4.8
+  },
+  {
+    "id": "B",
+    "name": "Bluetooth Beanie",
+    "tagline": "Warmth plus sound",
+    "description": "Knit beanie with integrated earbuds, 8 hours playback, and touch controls. Perfect for winter activities and workouts.",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop",
+    "price": "$39.99",
+    "rating": 4.6
+  },
+  {
+    "id": "C",
+    "name": "Ceramic Coffee Drip",
+    "tagline": "Brew like a barista",
+    "description": "Hand-crafted ceramic pour-over set with engraved guide and hourglass timer. Elevate your daily coffee ritual.",
+    "image": "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=300&h=300&fit=crop",
+    "price": "$29.99",
+    "rating": 4.9
+  },
+  {
+    "id": "D",
+    "name": "Desk Organizer Dock",
+    "tagline": "Clutter-free workspace",
+    "description": "7-slot modular dock with wireless charging pad, pen stand, and snack tray. Transform your desk into an organized hub.",
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=300&h=300&fit=crop",
+    "price": "$49.99",
+    "rating": 4.7
+  },
+  {
+    "id": "E",
+    "name": "Eco Yoga Mat",
+    "tagline": "Comfort, grip, and green",
+    "description": "100% natural rubber, extra cushion, printed alignment lines, and recyclable packaging. Support your practice and the planet.",
+    "image": "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=300&h=300&fit=crop",
+    "price": "$44.99",
+    "rating": 4.8
+  },
+  {
+    "id": "F",
+    "name": "Foldable Travel Jacket",
+    "tagline": "Packable protection",
+    "description": "Water-resistant, windproof, heat-retentive jacket that folds into its chest pocket. Pack light, travel smart.",
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=300&h=300&fit=crop",
+    "price": "$59.99",
+    "rating": 4.5
+  },
+  {
+    "id": "G",
+    "name": "Glass Smart Mug",
+    "tagline": "Temperature controlled elegance",
+    "description": "Self-heating insulated glass mug with app temperature settings. Keep your beverage at the perfect temperature.",
+    "image": "https://images.unsplash.com/photo-1527993456765-e6aef7b28fbb?w=300&h=300&fit=crop",
+    "price": "$34.99",
+    "rating": 4.7
+  },
+  {
+    "id": "H",
+    "name": "Home Scent Diffuser",
+    "tagline": "Mood lighting meets aromatherapy",
+    "description": "Ultrasonic diffuser with RGB LED and 12 scents set. Create the perfect ambiance for any room.",
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300&h=300&fit=crop",
+    "price": "$24.99",
+    "rating": 4.6
+  },
+  {
+    "id": "I",
+    "name": "Indoor Plant Kit",
+    "tagline": "Green space in small corners",
+    "description": "Beginner-friendly plants with self-watering pots and care app. Start your indoor garden today.",
+    "image": "https://images.unsplash.com/photo-1597848212624-e27b27f76a0a?w=300&h=300&fit=crop",
+    "price": "$34.99",
+    "rating": 4.8
+  },
+  {
+    "id": "J",
+    "name": "Jewelry Cleaning Wand",
+    "tagline": "Sparkle in seconds",
+    "description": "Ultrasonic jeweler with gentle foam and microfiber system. Keep your jewelry looking brand new.",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&h=300&fit=crop",
+    "price": "$29.99",
+    "rating": 4.7
+  },
+  {
+    "id": "K",
+    "name": "Knife Sharpening Station",
+    "tagline": "Kitchen edge maintenance",
+    "description": "4-stage diamond/ceramic sharpening guide with safety base. Professional-grade results at home.",
+    "image": "https://images.unsplash.com/photo-1610170425052-fdf7cc1cc151?w=300&h=300&fit=crop",
+    "price": "$39.99",
+    "rating": 4.9
+  },
+  {
+    "id": "L",
+    "name": "LED Desk Lamp",
+    "tagline": "Smart focus light",
+    "description": "Eye-care light with 5 spectra, motion sensor, and wireless charge base. Perfect for productivity.",
+    "image": "https://images.unsplash.com/photo-1565182999555-2be3dbc13342?w=300&h=300&fit=crop",
+    "price": "$44.99",
+    "rating": 4.8
+  },
+  {
+    "id": "M",
+    "name": "Modular Backpack",
+    "tagline": "Adapt to your day",
+    "description": "Magnetic modular compartments, weatherproof fabric, and laptop sleeve. Organize every adventure.",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop",
+    "price": "$79.99",
+    "rating": 4.7
+  },
+  {
+    "id": "N",
+    "name": "Noise-Cancelling Earbuds",
+    "tagline": "Silence the world",
+    "description": "Adaptive ANC, 36h battery, and transparent hearing mode. Immerse yourself in crystal-clear audio.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop",
+    "price": "$99.99",
+    "rating": 4.9
+  },
+  {
+    "id": "O",
+    "name": "Organic Skincare Set",
+    "tagline": "Complete daily ritual",
+    "description": "Cleanser, toner, moisturizer, serum — all cruelty free. Nourish your skin naturally.",
+    "image": "https://images.unsplash.com/photo-1596386469832-d56e6a9ffcd9?w=300&h=300&fit=crop",
+    "price": "$54.99",
+    "rating": 4.8
+  },
+  {
+    "id": "P",
+    "name": "Portable Projector",
+    "tagline": "Big screen everywhere",
+    "description": "Pocket-size 1080p, built-in speakers, WiFi mirroring. Movie nights anywhere, anytime.",
+    "image": "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=300&h=300&fit=crop",
+    "price": "$149.99",
+    "rating": 4.7
+  },
+  {
+    "id": "Q",
+    "name": "Quick-Charge Power Bank",
+    "tagline": "Power fast, travel light",
+    "description": "30W GaN, 2 USB-C ports, LED status display. Charge everything in minutes.",
+    "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=300&h=300&fit=crop",
+    "price": "$34.99",
+    "rating": 4.8
+  },
+  {
+    "id": "R",
+    "name": "Reusable Water Bottle",
+    "tagline": "Hydrate sustainably",
+    "description": "Insulated steel, rolling numeric counter, and leak-proof design. Stay hydrated, save the planet.",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e9?w=300&h=300&fit=crop",
+    "price": "$24.99",
+    "rating": 4.9
+  },
+  {
+    "id": "S",
+    "name": "Smart Scale",
+    "tagline": "Fitness insights in sync",
+    "description": "Body composition tracking with Bluetooth app charts. Know your health at a glance.",
+    "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=300&h=300&fit=crop",
+    "price": "$49.99",
+    "rating": 4.6
+  },
+  {
+    "id": "T",
+    "name": "Travel Pillow",
+    "tagline": "Jet lag rescue",
+    "description": "Memory foam, cooling cover, detachable hood. Sleep comfortably anywhere.",
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5f400f1d8?w=300&h=300&fit=crop",
+    "price": "$29.99",
+    "rating": 4.7
+  },
+  {
+    "id": "U",
+    "name": "UV Sanitizer Box",
+    "tagline": "Clean tech anywhere",
+    "description": "60-second germ kill for phone, keys, glasses. Sanitize with UV light.",
+    "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&h=300&fit=crop",
+    "price": "$39.99",
+    "rating": 4.8
+  },
+  {
+    "id": "V",
+    "name": "Virtual Fitness Subscription",
+    "tagline": "Coach in your pocket",
+    "description": "Live classes, trainer AI corrections, track progress. Fitness on your terms.",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300&h=300&fit=crop",
+    "price": "$14.99/month",
+    "rating": 4.7
+  },
+  {
+    "id": "W",
+    "name": "Wireless Keyboard",
+    "tagline": "Quiet typist prime",
+    "description": "Mechanical keys, multi-device switch, USB-C. Type in silence, work in style.",
+    "image": "https://images.unsplash.com/photo-1587829191301-7d069fe0049e?w=300&h=300&fit=crop",
+    "price": "$69.99",
+    "rating": 4.8
+  },
+  {
+    "id": "X",
+    "name": "X-Factor Insulated Lunchbox",
+    "tagline": "Warm meals, cold salads",
+    "description": "6L insulated capacity, removable divider, leakproof design. Meal prep perfection.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop",
+    "price": "$44.99",
+    "rating": 4.7
+  },
+  {
+    "id": "Y",
+    "name": "Yoga Block + Strap Set",
+    "tagline": "Stretch with confidence",
+    "description": "Eco foam block + adjustable strap + posture guide. Deepen your practice safely.",
+    "image": "https://images.unsplash.com/photo-1599211265228-0589e998a425?w=300&h=300&fit=crop",
+    "price": "$19.99",
+    "rating": 4.8
+  },
+  {
+    "id": "Z",
+    "name": "Zinc Supplement Pack",
+    "tagline": "Daily immune support",
+    "description": "100% zinc bisglycinate, vegan capsules, 30-day supply. Boost immunity naturally.",
+    "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde0e?w=300&h=300&fit=crop",
+    "price": "$14.99",
+    "rating": 4.9
+  }
+]
